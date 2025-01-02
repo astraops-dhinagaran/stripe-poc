@@ -1,0 +1,1 @@
+export const loginEndPoint = import.meta.env.VITE_BACKEND_API_URL + "/login";
