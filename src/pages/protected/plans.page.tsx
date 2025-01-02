@@ -1,6 +1,13 @@
+import PlansGrid from "../../features/plans/components/PlansGrid";
+
 function PlansPage() {
     return ( 
-        <div>Plans</div>
+        <div>
+            <div className="flex items-center justify-between mb-5">
+                <h1 className="">Plans</h1>
+            </div>
+            <PlansGrid />
+        </div>
      );
 }
 

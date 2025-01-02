@@ -1,18 +1,20 @@
 import { Button } from "primereact/button";
-import useProductStore from "../store/products.store";
+import usePlansStore from "../../plans/store/plans.store";
 import { PostAxiosServiceWithToken } from "../../../libs/axiosservice/axios.service";
-import { productCheckoutEndPoint, productPaymentInitiationEndPoint } from "../product.endpoints";
-import { ProductPaymentCheckoutWithStripeSchema } from "../schemas/payment.schemas";
-import { redirect } from "@tanstack/react-router";
+import { productCheckoutEndPoint, productPaymentInitiationEndPoint } from "../../products/product.endpoints";
+import { ProductPaymentCheckoutWithStripeSchema } from "../../products/schemas/payment.schemas";
 
-function StripePayButton(rowData, column) {
+function StripePayButton({ rowData, rowIndex }: {
+    rowData: any,
+    rowIndex: number
+}) {
 
-    const { payButtonLoadingIndex, paymentStatus } = useProductStore()
+    const { paymentButtonLoadingIndex, paymentStatus } = usePlansStore()
 
     const initiatePayment = async () => {
-        useProductStore.setState((state) => ({
+        usePlansStore.setState((state) => ({
             ...state,
-            payButtonLoadingIndex: column.rowIndex,
+            paymentButtonLoadingIndex: rowIndex,
             paymentStatus: 'Initiating'
         }))
 
@@ -29,7 +31,7 @@ function StripePayButton(rowData, column) {
     }
 
     const checkoutPayment = async (priceId: string, customerId: string) => {
-        useProductStore.setState((state) => ({
+        usePlansStore.setState((state) => ({
             ...state,
             paymentStatus: 'Processing'
         }))
@@ -47,16 +49,16 @@ function StripePayButton(rowData, column) {
             window.location.replace(response.redirectUrl)
         }
 
-        useProductStore.setState((state) => ({
+        usePlansStore.setState((state) => ({
             ...state,
-            payButtonLoadingIndex: undefined,
+            paymentButtonLoadingIndex: undefined,
             paymentStatus: undefined
         }))
     }
 
     return (
         <Button onClick={initiatePayment} className="w-fit">{
-            payButtonLoadingIndex == column.rowIndex ? paymentStatus : 'Pay'
+            paymentButtonLoadingIndex == rowIndex ? paymentStatus : 'Pay'
         }</Button>
     );
 }
