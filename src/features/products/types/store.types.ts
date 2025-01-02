@@ -1,4 +1,4 @@
 export interface ProductStoreType {
-    payButtonLoadingIndex: number | undefined;
-    paymentStatus: string | undefined;
+    deleteButtonLoadingIndex: number | undefined;
+    deleteStatus: string | undefined;
 }

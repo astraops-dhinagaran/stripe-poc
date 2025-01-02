@@ -7,3 +7,7 @@ export interface AxiosPostServiceType {
 export interface AxiosGetServiceType {
     url: string;
 }
+
+export interface AxiosDeleteServiceType {
+    url: string;
+}

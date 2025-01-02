@@ -5,9 +5,9 @@ import { GetAxiosService } from "../../../libs/axiosservice/axios.service";
 import { productListEndPoint } from "../product.endpoints";
 import Loader from "../../../components/ui/Loader";
 import CreditCardAvailable from "./CreditCardAvailable";
-import StripePayButton from "./StripePayButton";
+import TableActions from "./TableActions";
 
-const getProductList = async () => {
+export const getProductList = async () => {
     let response = await GetAxiosService({
         url: productListEndPoint
     })
@@ -30,7 +30,7 @@ function ProductsList() {
                 <Column field="description" header="Description" />
                 <Column field="currency" header="Currency" />
                 <Column field="isCreditCardRequired" header="Credit Card Available" body={CreditCardAvailable} />
-                <Column header="Action" body={StripePayButton} />
+                <Column field="actions" header="Actions" body={TableActions} />
             </DataTable>
     );
 }

@@ -8,6 +8,20 @@ export const formDesignSystem = {
             )
         })
     },
+    inputtextarea: {
+        root: ({ props, context }) => ({
+            className: classNames(
+                'border rounded-[12px] h-fit w-full px-[12px] py-[10px] outline-none'
+            )
+        })
+    },
+    selectbutton: {
+        root: ({ props, context }) => ({
+            className: classNames(
+                'border border-gray-300 rounded-md'
+            )
+        })
+    },
     button: {
         root: ({ props, context }) => ({
             className: classNames(

@@ -1,4 +1,5 @@
 import HomePage from "../pages/protected/home.page";
+import PlansPage from "../pages/protected/plans.page";
 import ProductsPage from "../pages/protected/products.page";
 import LoginPage from "../pages/sessions/login.page";
 import { RoutingPathType } from "./route.interfaces";
@@ -20,8 +21,8 @@ export const rountingPathList: RoutingPathType[] = [
         isProtected: true
     },
     {
-        path: '/purchase',
-        component: ProductsPage,
+        path: '/plans',
+        component: PlansPage,
         isProtected: true
     }
 ]

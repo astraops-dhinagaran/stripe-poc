@@ -16,8 +16,8 @@ export const navLink: NavLinkType[] = [
         role: ['admin']
     },
     {
-        href: '/purchase',
-        title: 'Purchase',
+        href: '/plans',
+        title: 'Plans',
         role: ['user']
     },
 ]

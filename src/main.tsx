@@ -7,6 +7,8 @@ import { PrimeReactProvider } from 'primereact/api';
 import { formDesignSystem, tableDesignSystem } from './libs/primereact/formdesignsystem'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import "primereact/resources/themes/lara-light-cyan/theme.css";
+import 'primeicons/primeicons.css';
+        
 
 const appDesignSystem = {
   ...formDesignSystem,

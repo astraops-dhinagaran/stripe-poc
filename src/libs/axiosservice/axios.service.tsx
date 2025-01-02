@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AxiosGetServiceType, AxiosPostServiceType } from "./axios.service.types";
+import { AxiosDeleteServiceType, AxiosGetServiceType, AxiosPostServiceType } from "./axios.service.types";
 
 export const GetAxiosService = async ({
     url
@@ -45,6 +45,28 @@ export const PostAxiosServiceWithToken = async ({
         let token: string = localStorage.getItem('auth_token')!;
 
         const response = await axios.post(url, body, {
+            headers: {
+                Authorization: 'Bearer ' + token
+            }
+        });
+
+        if (response.status == 200 || response.status == 201) {
+            return response.data
+        } else {
+            return null;
+        }
+    } catch (err) {
+        return null;
+    }
+}
+
+export const DeleteAxiosService = async ({
+    url
+}: AxiosDeleteServiceType) => {
+    try {
+        let token: string = localStorage.getItem('auth_token')!;
+
+        const response = await axios.delete(url, {
             headers: {
                 Authorization: 'Bearer ' + token
             }
