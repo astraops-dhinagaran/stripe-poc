@@ -29,6 +29,27 @@ export const formDesignSystem = {
             )
         })
     },
+    checkbox: {
+        root: ({ props, context }) => ({
+            className: classNames(
+                'border border-gray-300 rounded-md h-[30px] w-[30px]'
+            )
+        })
+    },
+    radio: {
+        root: ({ props, context }) => ({
+            className: classNames(
+                'border border-gray-300 rounded-md'
+            )
+        })
+    },
+    dropdown: {
+        root: ({ props, context }) => ({
+            className: classNames(
+                'border rounded-[12px] h-fit w-full px-[12px] outline-none'
+            )
+        })
+    }
 }
 
 export const tableDesignSystem = {

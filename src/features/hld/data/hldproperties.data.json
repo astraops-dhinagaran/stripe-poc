@@ -1,0 +1,51 @@
+[
+    {
+      "field_type": "input",
+      "field_name": "input",
+      "regex": "^[a-zA-Z]*$",
+      "value": "",
+      "is_required": true
+    },
+    {
+      "field_type": "select",
+      "field_name": "option",
+      "is_required": true,
+      "value": "",
+      "options": [
+        {
+          "label": "label 1",
+          "value": ""
+        },
+        {
+          "label": "label 1",
+          "value": "1"
+        },
+        {
+          "label": "label 2",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "field_type": "checkbox",
+      "field_name": "checkbox",
+      "value": false,
+      "is_required": true
+    },
+    {
+      "field_type": "radio",
+      "field_name": "radio",
+      "value": null,
+      "is_required": true,
+      "options": [
+        {
+          "label": "label 1",
+          "value": "1"
+        },
+        {
+          "label": "label 2",
+          "value": "2"
+        }
+      ]
+    }
+  ]

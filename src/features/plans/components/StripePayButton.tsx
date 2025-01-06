@@ -24,7 +24,6 @@ function StripePayButton({ rowData, rowIndex }: {
         })
 
         if (response != null) {
-            console.log("init", response)
             checkoutPayment(rowData.stripePriceId, response.stripeCustomerId as string)
         }
 
@@ -45,7 +44,6 @@ function StripePayButton({ rowData, rowIndex }: {
         })
 
         if (response != null) {
-            console.log("Checkout", response)
             window.location.replace(response.redirectUrl)
         }
 
@@ -58,7 +56,7 @@ function StripePayButton({ rowData, rowIndex }: {
 
     return (
         <Button onClick={initiatePayment} className="w-fit">{
-            paymentButtonLoadingIndex == rowIndex ? paymentStatus : 'Pay'
+            paymentButtonLoadingIndex == rowIndex ? paymentStatus : 'Select Plan'
         }</Button>
     );
 }

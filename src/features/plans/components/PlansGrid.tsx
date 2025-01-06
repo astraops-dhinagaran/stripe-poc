@@ -28,7 +28,7 @@ function PlansGrid() {
                             <div>
                                 <div className="my-2 text-lg font-bold">{plan.name}</div>
                             <div className="my-2 text-sm text-gray-500">{plan.description}</div>
-                            <div className="my-2flex items-center gap-2">
+                            <div className="my-2 flex items-center gap-2">
                                 <div className="text-lg font-bold">{plan.price}</div>
                                 <div className="text-sm text-gray-500">{plan.currency}</div>
                             </div>

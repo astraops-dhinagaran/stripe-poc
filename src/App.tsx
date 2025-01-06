@@ -1,4 +1,4 @@
-import { createRootRoute, createRoute, createRouter, Outlet, redirect } from "@tanstack/react-router";
+import { createRootRoute, createRoute, createRouter, redirect, useLocation, useMatch } from "@tanstack/react-router";
 import { rountingPathList } from "./routes/routingpaths";
 import SessionLayout from "./layouts/sessionlayout";
 import ProtectedLayout from "./layouts/protectedlayout";

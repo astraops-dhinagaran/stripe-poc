@@ -1,0 +1,19 @@
+[
+    {
+        "node_type": "custom-default-node",
+        "node_category": "group",
+        "color": "gray",
+        "node_name": "VPC",
+        "node_style": {
+          "width": "10rem",
+          "height": "10rem"
+        },
+        "img": "https://via.placeholder.com/150",
+        "node_handlers": [
+          "left",
+          "right"
+        ],
+        "resizer_enable": true
+      }
+      
+]

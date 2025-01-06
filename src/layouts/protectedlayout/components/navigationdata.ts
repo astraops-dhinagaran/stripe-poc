@@ -20,4 +20,14 @@ export const navLink: NavLinkType[] = [
         title: 'Plans',
         role: ['user']
     },
+    {
+        href: '/hld',
+        title: 'HLD',
+        role: ['admin']
+    },
+    {
+        href: '/stripe-embed',
+        title: 'Stripe Embed',
+        role: ['admin', 'user']
+    }
 ]
